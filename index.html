@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trackeur GPS : suivi du voilier</title>
+    <!-- Inclusion de la feuille de style Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Inclusion du fichier CSS personnalisé -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Suivi du voilier</h1>
+    </header>
+    <main>
+        <!-- Zone de la carte -->
+        <div id="map"></div>
+
+        <!-- Tableau des coordonnées GPS -->
+        <table id="coordinatesTable">
+            <thead>
+            <tr>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-lat="48.8566" data-lng="2.3522">
+                <td>48.8566</td>
+                <td>2.3522</td>
+            </tr>
+            <tr data-lat="40.7128" data-lng="-74.0060">
+                <td>40.7128</td>
+                <td>-74.0060</td>
+            </tr>
+            <tr data-lat="35.6895" data-lng="139.6917">
+                <td>35.6895</td>
+                <td>139.6917</td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+    <!-- Inclusion de la bibliothèque Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Inclusion du fichier JavaScript personnalisé -->
+    <script src="app.js"></script>
+</body>
+</html>

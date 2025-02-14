@@ -1,10 +1,10 @@
 <?php
-
-echo("test");
+$config = require 'config.php';
 
 $api_url = "https://liveobjects.orange-business.com/api/v0/data/streams/";
-$api_key = "17acbb4b49134812be2ebd85081ba4d6";
-$nom_appareil = "urn%3Alo%3Ansid%3Alora%3A24E124745E277995?limit=100";
+$api_key = $config['api_key'];
+// Limite à 30 messages
+$nom_appareil = "urn%3Alo%3Ansid%3Alora%3A24E124745E277995?limit=30";
 $api_url = $api_url . $nom_appareil;
 
 $headers = [
