@@ -18,7 +18,7 @@ function hexToBytes(hex) {
 }
 
 const options = {
-    method: 'GET', // ou "POST" selon votre besoin
+    method: 'GET',
     headers: {
         'X-API-KEY': apiKey,
         'Content-Type': 'application/json'
@@ -47,18 +47,11 @@ export function getData() {
                     decodedData.timestamp = entry.timestamp;
                     decodedData.deviceEUI = deviceEUI;
 
+                    //console.log(decodedData);
                     return decodedData;
-                })
-
-
-            console.log("Données filtrées et valides :", filteredData);
-
-            // Affiche le résultat en cas de succès
-            console.log(filteredData);
-        })
-        .catch(error => {
-            // Affiche le message d'erreur en cas de problème
-            console.error(error.message);
+                });
+            //console.log(filteredData)
+            return filteredData;
         });
 }
 
