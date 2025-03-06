@@ -8,48 +8,66 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Inclusion du fichier CSS personnalisé -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
 </head>
 <body>
-    <header>
-        <h1>Suivi du voilier</h1>
-    </header>
-    <main>
-        <!-- Zone de la carte -->
-        <div id="map"></div>
+<header>
+    <h1>Suivi du voilier</h1>
+</header>
+<main>
+    <!-- Zone de la carte -->
+    <div id="map"></div>
 
-        <!-- Tableau des coordonnées GPS -->
-        <table id="coordinatesTable">
-            <thead>
-            <tr>
-                <th>Latitude</th>
-                <th>Longitude</th>
-                <th>Température</th>
-                <th>Date</th>
-                <th>Heure</th>
-            </tr>
-            </thead>
-            <tbody>
-            <script>
-
-            </script>
-            <tr data-lat="48.8566" data-lng="2.3522">
-                <td>48.8566</td>
-                <td>2.3522</td>
-            </tr>
-            <tr data-lat="40.7128" data-lng="-74.0060">
-                <td>40.7128</td>
-                <td>-74.0060</td>
-            </tr>
-            <tr data-lat="35.6895" data-lng="139.6917">
-                <td>35.6895</td>
-                <td>139.6917</td>
-            </tr>
-            </tbody>
-        </table>
-    </main>
-    <!-- Inclusion de la bibliothèque Leaflet -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Inclusion du fichier JavaScript personnalisé -->
-    <script type="module" src="app.js"></script>
+    <!-- Tableau des coordonnées GPS -->
+    <table id="coordinatesTable">
+        <thead>
+        <tr>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Température</th>
+            <th>Date</th>
+            <th>Heure</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-lat="48.8566" data-lng="2.3522">
+            <td>48.8566</td>
+            <td>2.3522</td>
+            <td>18°C</td>
+            <td>2025-03-04</td>
+            <td>14:00</td>
+        </tr>
+        <tr data-lat="40.7128" data-lng="-74.0060">
+            <td>40.7128</td>
+            <td>-74.0060</td>
+            <td>20°C</td>
+            <td>2025-03-04</td>
+            <td>16:00</td>
+        </tr>
+        <tr data-lat="35.6895" data-lng="139.6917">
+            <td>35.6895</td>
+            <td>139.6917</td>
+            <td>22°C</td>
+            <td>2025-03-04</td>
+            <td>18:00</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<!-- Inclusion de la bibliothèque Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Inclusion de jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Inclusion du fichier JavaScript personnalisé -->
+<script type="module" src="app.js"></script>
+<!-- Datatable -->
+<script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        let table = new DataTable('#coordinatesTable', {
+            responsive: true
+        });
+    });
+</script>
 </body>
 </html>
