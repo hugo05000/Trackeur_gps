@@ -37,3 +37,4 @@ Cette application IoT permet le suivi en temps réel des voiliers afin de préve
 
 ## Mise en place
 Pour configurer le projet, créez et configurez un fichier 'config.js' basé sur l'exemple 'config.exemple.js' avec les bonnes valeurs.
+Pensez bien à configurer la limite de récupération de données dans la variable deviceEUI
