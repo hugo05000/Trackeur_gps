@@ -1,6 +1,6 @@
 # Suivi GPS de Voilier en Mer
 
-Cette application IoT permet le suivi en temps réel des voiliers afin de prévenir les vols et améliorer la sécurité des embarcations. Basée sur un capteur GPS connecté à la plateforme Orange Live Objects, elle assure une surveillance constante et alerte automatiquement les propriétaires en cas de déplacement suspect.
+Cette application IoT permet le suivi en temps réel des voiliers afin de prévenir les vols et améliorer la sécurité des embarcations. Basée sur un capteur GPS connecté à la plateforme Orange Live Objects, elle assure une surveillance constante et alerte automatiquement les propriétaires en cas de déplacement suspect. L'application a été réalisé dans le cadre de mon Master 2 MIAGE à l'université Aix-Marseille.
 
 ---
 
@@ -13,6 +13,8 @@ Cette application IoT permet le suivi en temps réel des voiliers afin de préve
 ---
 
 ## Architecture technique du projet
+
+<b>L'architecture technique est celle que nous présenterons lors de notre présentation orale pour illustrer des cas d'usage et non celle que traite l'application.</b>
 
 ### Couche Physique
 - Capteur GPS installé directement sur le voilier.
