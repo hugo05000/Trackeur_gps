@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var tableBody = document.querySelector("#coordinatesTable tbody");
     getData()
         .then((data) => {
+            console.log(data);
             // Nettoyer le tableau avant d'ajouter les nouvelles données
             tableBody.innerHTML = "";
             //Boucle permettant d'afficher seulement la dernière position par défaut
